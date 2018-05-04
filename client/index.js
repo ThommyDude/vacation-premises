@@ -58,7 +58,6 @@ async function start()
     // 5. make a contract for an appartment rental between a customer and an owner
 
     let contApart = apartments[Math.floor(Math.random()*apartments.length)];
-    let contOwn = owners[Math.floor(Math.random()*owners.length)];
     let contCust = customers[Math.floor(Math.random()*customers.length)];
     
     let contract = new Contract(contApart, contCust);
