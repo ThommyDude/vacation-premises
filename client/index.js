@@ -82,4 +82,32 @@ async function start()
     //  b) the order is aproved by the owner
     //  c) the contract is issued to the customer and owner by the agent
 
+    for(let apartment of apartments)
+    {
+        // <div class="col-md-4">
+        //     <h2>Heading</h2>
+        //     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+        //         mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+        //         mollis euismod. Donec sed odio dui. </p>
+        //     <p>
+        //         <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+        //     </p>
+        // </div>
+
+        let html = `
+        <div class="col-md-4">
+            <h2>${apartment.name}</h2>
+            <img src="${apartment.image}" class="img-fluid" />
+            <p>
+                Address: ${apartment.address}
+            </p>
+            <p>
+                Price per Day: ${apartment.pricePerDay}
+            </p>
+        </div>
+        `;
+
+        $(".apartments").append(html);
+    }
+
 }
