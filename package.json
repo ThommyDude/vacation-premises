@@ -1,0 +1,15 @@
+{
+  "name": "vacation-premises",
+  "version": "1.0.0",
+  "description": "Hire your vacation living through us",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "npm": "^6.0.0"
+  }
+}

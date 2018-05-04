@@ -1,0 +1,26 @@
+[
+    {
+        "firstName": "Benjamin",
+        "lastName": "Berglund",
+        "email": "benjamin@nodebite.se",
+        "type": "Customer"
+    },
+    {
+        "firstName": "Thomas",
+        "lastName": "van der Ven",
+        "email": "thomas@vanderven.se",
+        "type": "Customer"
+    },
+    {
+        "firstName": "Winston",
+        "lastName": "Johnson",
+        "email": "win@properties.com",
+        "type": "Owner"
+    },
+    {
+        "firstName": "Steve",
+        "lastName": "Stephenson",
+        "email": "steve@steve.steve",
+        "type": "Agent"
+    }
+]
