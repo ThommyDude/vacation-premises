@@ -37,24 +37,32 @@ async function start()
                 agents.push(agent);
             }
         }
-        
-        // 4. make some appartment objects
-        let aps = await http.get('/data/apartments');
-        if(aps.data)
+    }
+    
+    // 4. make some appartment objects
+    let aps = await http.get('/data/apartments');
+    if(aps.data)
+    {
+        for(let apartment of aps.data)
         {
-            for(let apartment of aps.data)
-            {
-                apartments.push(new Apartment(apartment));
-            }
+            apartments.push(new Apartment(apartment));
         }
-
-        console.log(customers);
-        console.log(owners);
-        console.log(agents);
-        console.log(apartments);
     }
 
+    console.log(customers);
+    console.log(owners);
+    console.log(agents);
+    console.log(apartments);
+
+    
     // 5. make a contract for an appartment rental between a customer and an owner
+
+    let contApart = apartments[Math.floor(Math.random()*apartments.length)];
+    let contOwn = owners[Math.floor(Math.random()*owners.length)];
+    let contCust = customers[Math.floor(Math.random()*customers.length)];
+    
+    let contract = new Contract(contApart, contCust);
+    console.log(contract);
 
     // 6. add an agent to the contract
 

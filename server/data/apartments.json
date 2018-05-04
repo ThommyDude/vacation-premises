@@ -2,21 +2,21 @@
     {
         "name": "Villa del Sol",
         "address": "Rue de la Soleil de la nuit 14, Narvik",
-        "owner-mail": "win@properties.com",
+        "ownerMail": "win@properties.com",
         "image": "/images/villa-sol.jpg",
         "pricePerDay": 40
     },
     {
         "name": "Villa del Luna",
         "address": "Rue de la Lune de la jour 41, Narvik",
-        "owner-mail": "win@properties.com",
+        "ownerMail": "win@properties.com",
         "image": "/images/villa-luna.jpg",
         "pricePerDay": 55
     },
     {
         "name": "Maison de l'arbre",
         "address": "????",
-        "owner-mail": "win@properties.com",
+        "ownerMail": "win@properties.com",
         "image": "/images/boomhut.jpg",
         "pricePerDay": 88
     }
