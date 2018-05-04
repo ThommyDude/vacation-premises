@@ -74,12 +74,7 @@ async function start()
                 return (apartment.name == contract.apartment);
             })[0];
 
-            let y = customers.filter(function(customer)
-            {
-                return (customer.email == contract.tenant);
-            })[0];
-
-            contracts.push(new Contract(x, y));
+            contracts.push(new Contract(x, contract.tenant));
         }
     }
 
