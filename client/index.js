@@ -57,11 +57,8 @@ async function start()
 
     
     // 5. make a contract for an appartment rental between a customer and an owner
+    
     // 6. add an agent to the contract
-
-    // let contApart = apartments[Math.floor(Math.random()*apartments.length)];
-    // let contCust = customers[Math.floor(Math.random()*customers.length)];
-    // let contAgnt = agents[Math.floor(Math.random()*agents.length)];
 
     let conts = await http.get('data/contracts');
     
