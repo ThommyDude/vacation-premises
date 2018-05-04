@@ -56,14 +56,15 @@ async function start()
 
     
     // 5. make a contract for an appartment rental between a customer and an owner
+    // 6. add an agent to the contract
 
     let contApart = apartments[Math.floor(Math.random()*apartments.length)];
     let contCust = customers[Math.floor(Math.random()*customers.length)];
+    let contAgnt = agents[Math.floor(Math.random()*agents.length)];
     
-    let contract = new Contract(contApart, contCust);
+    let contract = new Contract(contApart, contCust, contAgnt);
     console.log(contract);
 
-    // 6. add an agent to the contract
 
     // 7. change the procedure above so that
     //  a) an order is placed by the customer
