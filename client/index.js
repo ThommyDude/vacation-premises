@@ -4,6 +4,7 @@ let customers = [];
 let owners = [];
 let agents = [];
 let apartments = [];
+let contracts = [];
 
 $(start);
 
@@ -58,13 +59,31 @@ async function start()
     // 5. make a contract for an appartment rental between a customer and an owner
     // 6. add an agent to the contract
 
-    let contApart = apartments[Math.floor(Math.random()*apartments.length)];
-    let contCust = customers[Math.floor(Math.random()*customers.length)];
-    let contAgnt = agents[Math.floor(Math.random()*agents.length)];
-    
-    let contract = new Contract(contApart, contCust, contAgnt);
-    console.log(contract);
+    // let contApart = apartments[Math.floor(Math.random()*apartments.length)];
+    // let contCust = customers[Math.floor(Math.random()*customers.length)];
+    // let contAgnt = agents[Math.floor(Math.random()*agents.length)];
 
+    let conts = await http.get('data/contracts');
+    
+    if(conts.data)
+    {
+        for (let contract of conts.data)
+        {
+            let x = apartments.filter(function(apartment)
+            {
+                return (apartment.name == contract.apartment);
+            })[0];
+
+            let y = customers.filter(function(customer)
+            {
+                return (customer.email == contract.tenant);
+            })[0];
+
+            contracts.push(new Contract(x, y));
+        }
+    }
+
+    console.log(contracts);
 
     // 7. change the procedure above so that
     //  a) an order is placed by the customer

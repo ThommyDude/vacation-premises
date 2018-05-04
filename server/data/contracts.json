@@ -1,0 +1,10 @@
+[
+    {
+        "apartment": "Villa del Sol",
+        "tenant": "benjamin@nodebite.se"
+    },
+    {
+        "apartment": "Villa del Luna",
+        "tenant": "thomas@vanderven.se"
+    }
+]

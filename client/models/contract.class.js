@@ -1,10 +1,10 @@
 class Contract
 {
-    constructor(apartment, customer, agent)
+    constructor(apartment, customer/*, agent*/)
     {
         this.apartment = apartment;
         this.customer = customer;
-        this.agent = agent;
+        // this.agent = agent;
     
         for(let owner of owners)
         {
