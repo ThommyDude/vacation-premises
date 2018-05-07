@@ -1,10 +1,12 @@
 [
     {
         "apartment": "Villa del Sol",
-        "tenant": "benjamin@nodebite.se"
+        "tenant": "benjamin@nodebite.se",
+        "agent": "steve@steve.steve"
     },
     {
         "apartment": "Villa del Luna",
-        "tenant": "thomas@vanderven.se"
+        "tenant": "thomas@vanderven.se",
+        "agent": "steve@steve.steve"
     }
 ]

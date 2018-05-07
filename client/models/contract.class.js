@@ -1,6 +1,6 @@
 class Contract
 {
-    constructor(apartment, customer/*, agent*/)
+    constructor(apartment, customer, agent)
     {
         this.apartment = apartment;
         
@@ -14,6 +14,9 @@ class Contract
             return (o.email == apartment.ownerMail);
         })[0];
         
-        // this.agent = agent;
+        this.agent = agents.filter(function(a)
+        {
+            return (a.email == agent);
+        })[0];
     }
 }
