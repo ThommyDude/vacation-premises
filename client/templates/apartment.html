@@ -1,0 +1,22 @@
+Apartment.prototype.render = function(selector)
+{
+    $(
+        `<div class="col-md-4">
+            <h2>${this.name}</h2>
+            <p>
+                Address: ${this.address}
+            </p>
+            <div>
+                <img src="${this.image}" class="img-fluid">
+            </div>
+            <p>
+                Price per Day: ${this.pricePerDay}
+            </p>
+            <br>
+            <p>
+                <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        `
+    ).appendTo(selector);
+}
