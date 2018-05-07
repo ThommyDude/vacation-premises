@@ -71,7 +71,7 @@ async function start()
                 return (apartment.name == contract.apartment);
             })[0];
 
-            contracts.push(new Contract(x, contract.tenant));
+            contracts.push(new Contract(x, contract.tenant, contract.agent));
         }
     }
 
@@ -84,30 +84,22 @@ async function start()
 
     for(let apartment of apartments)
     {
+        apartment.render('.apartments, .dropdown-aps');
+
+        // let html = `
         // <div class="col-md-4">
-        //     <h2>Heading</h2>
-        //     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-        //         mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-        //         mollis euismod. Donec sed odio dui. </p>
+        //     <h2>${apartment.name}</h2>
+        //     <img src="${apartment.image}" class="img-fluid" />
         //     <p>
-        //         <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+        //         Address: ${apartment.address}
+        //     </p>
+        //     <p>
+        //         Price per Day: ${apartment.pricePerDay}
         //     </p>
         // </div>
+        // `;
 
-        let html = `
-        <div class="col-md-4">
-            <h2>${apartment.name}</h2>
-            <img src="${apartment.image}" class="img-fluid" />
-            <p>
-                Address: ${apartment.address}
-            </p>
-            <p>
-                Price per Day: ${apartment.pricePerDay}
-            </p>
-        </div>
-        `;
-
-        $(".apartments").append(html);
+        // $(".apartments").append(html);
     }
 
 }
